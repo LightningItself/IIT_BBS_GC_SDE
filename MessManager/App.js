@@ -13,17 +13,32 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <View style={{ flex: 1 }}>
-        <View style={{ height: 40 }} />
+        <View style={{  }} />
         <NavigationContainer>
           <Stack.Navigator
             initialRouteName="Login"
             screenOptions={{
-              headerShown: false,
               animation: "fade",
             }}
           >
-            <Stack.Screen name="Login" component={Login} />
-            <Stack.Screen name="User" component={User} />
+            <Stack.Screen
+             name="Login"
+             component={Login}
+             options={{
+              headerShown: false,
+             }}
+            />
+            <Stack.Screen 
+              name="User" 
+              component={User} 
+              options={{ 
+                title: "Student", 
+                headerTitleAlign: 'center',
+                headerStyle: {
+                  backgroundColor: 'orange',
+                }, 
+                headerTintColor: 'white',}}
+            />
             <Stack.Screen name="Admin" component={Admin} />
           </Stack.Navigator>
         </NavigationContainer>
