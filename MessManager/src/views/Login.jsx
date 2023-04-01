@@ -18,6 +18,7 @@ WebBrowser.maybeCompleteAuthSession();
 
 const Login = ({ navigation }) => {
   const [admin, setAdmin] = useState(false);
+  const [email, setEmail] = useState("");
 
   const [request, response, promptAsync] = Google.useAuthRequest({
     expoClientId:
@@ -33,14 +34,24 @@ const Login = ({ navigation }) => {
     promptAsync();
   };
 
+  const getEmail = (accessToken) => {
+    fetch("https://www.googleapis.com/oauth2/v1/userinfo?alt=json", {
+      headers: { Authorization: `Bearer ${accessToken}` },
+    })
+      .then((email) => email.json())
+      .then((emailJson) => {
+        setEmail(emailJson.email);
+        console.log(emailJson.email);
+      });
+  };
+
   useEffect(() => {
     if (response?.type === "success") {
-      const { authentication } = response;
-      console.log(authentication);
+      getEmail(response?.authentication?.accessToken);
       if (admin) {
         navigation.navigate("Admin");
       } else {
-        navigation.navigate("User");
+        navigation.navigate("User", { email: email });
       }
     }
   }, [response]);
