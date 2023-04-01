@@ -10,8 +10,39 @@ import { Button } from "@rneui/themed";
 import { ThemeProvider } from "react-native-paper";
 import MatwerialICon from "react-native-vector-icons/MaterialIcons";
 import Ionicons from "react-native-vector-icons/Ionicons";
-import { cloneElement } from "react";
+import { cloneElement, useEffect, useState } from "react";
+import * as WebBrowser from "expo-web-browser";
+import * as Google from "expo-auth-session/providers/google";
+
+WebBrowser.maybeCompleteAuthSession();
+
 const Login = ({ navigation }) => {
+  const [admin, setAdmin] = useState(false);
+
+  const [request, response, promptAsync] = Google.useAuthRequest({
+    expoClientId:
+      "956284867954-rva1v9g09rg891to8fl5fkk7jpjlhu4v.apps.googleusercontent.com",
+  });
+
+  const googleLoginHandler = (adm) => {
+    if (adm) {
+      setAdmin(true);
+    }
+    promptAsync();
+  };
+
+  useEffect(() => {
+    if (response?.type === "success") {
+      const { authentication } = response;
+      console.log(authentication);
+      if (admin) {
+        navigation.navigate("Admin");
+      } else {
+        navigation.navigate("User");
+      }
+    }
+  }, [response]);
+
   return (
     // <View>
     //
@@ -111,7 +142,7 @@ const Login = ({ navigation }) => {
           </Text>
           <View style={{ flexDirection: "row", justifyContent: "center" }}>
             <TouchableOpacity
-               onPress={() => {}}
+              onPress={googleLoginHandler.bind(this, false)}
               style={{
                 borderColor: "#ddd",
                 borderWidth: 2,
@@ -139,7 +170,7 @@ const Login = ({ navigation }) => {
           }}
         >
           <Text>Admin </Text>
-          <TouchableOpacity  onPress={() => navigation.navigate("Admin")}>
+          <TouchableOpacity onPress={googleLoginHandler.bind(this, true)}>
             <Text style={{ color: "#AD40AF", fontWeight: 700 }}>
               Click Here
             </Text>
