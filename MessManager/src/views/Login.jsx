@@ -27,6 +27,8 @@ const Login = ({ navigation }) => {
   const googleLoginHandler = (adm) => {
     if (adm) {
       setAdmin(true);
+    } else {
+      setAdmin(false);
     }
     promptAsync();
   };
