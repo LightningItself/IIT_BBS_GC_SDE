@@ -58,7 +58,19 @@ export default function App() {
                 headerShadowVisible: false,
               }}
             />
-            <Stack.Screen name="Rate Food" component={RatingPage} />
+            <Stack.Screen 
+              name="Rate Food" 
+              component={RatingPage} 
+              options={{ 
+                title: "", 
+                headerTitleAlign: 'center',
+                headerStyle: {
+                  backgroundColor: '#FF971D',
+                }, 
+                headerTintColor: 'white',
+                headerShadowVisible: false,
+              }}
+              />
           </Stack.Navigator>
         </NavigationContainer>
       </View>

@@ -10,7 +10,7 @@ const CarouselItem = ({ item, index }) => {
         <View style={styles.container}>
             <Card style={styles.card}>
                 <Title style={{fontWeight: '900', fontSize: 30, padding: 10, textAlign: 'center', paddingBottom: 0, color: 'white'}}>{item.dayName}</Title>
-                <Card.Content style={{ margin: 8, borderRadius: 10, backgroundColor: '#FEEAB8'}}>
+                <Card.Content style={{ margin: 8, borderRadius: 10, backgroundColor: '#FDEEC9'}}>
                     <Paragraph style={styles.heading}>Breakfast:</Paragraph>
                     <Paragraph style={styles.para}>{item.food1}</Paragraph>
                     <Paragraph style={styles.heading}>Lunch:</Paragraph>
