@@ -44,12 +44,9 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    borderWidth: 1,
-    margin: 20,
     padding: 10,
     borderRadius: 10,
     backgroundColor: 'white',
-    elevation: 10
   },
   headingContainer: {
     paddingTop: 50,

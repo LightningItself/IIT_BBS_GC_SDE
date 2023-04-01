@@ -125,24 +125,29 @@ const ModalContent = (props) => {
           </View>
         )}
       </View>
-      {QRClicked && (
-        <View style={{ alignItems: "center" }} onTouchEnd={QRClose}>
-          <Text
-            style={{
-              fontVariant: "bold",
-              color: "white",
-              padding: 4,
-              backgroundColor: "orange",
-              fontSize: 20,
-              paddingHorizontal: 15,
-              borderRadius: 30,
-            }}
+      <View style={{flexDirection: 'row', justifyContent: 'center'}}>
+        {QRClicked && (
+          <View style={{ alignItems: "center", marginRight: 10 }} >
+            <Button
+            icon="close-circle"
+            mode="contained"
+            onPress={QRClose}
+            buttonColor="orange"
           >
-            {" "}
-            Cancel
-          </Text>
-        </View>
-      )}
+            Close
+          </Button>
+          </View>
+        )}
+        <Button
+          icon="star-circle"
+          mode="contained"
+          onPress={props.onRateClick}
+          buttonColor="orange"
+          style={{alignSelf:"center",}}
+        >
+          Rate {props.Heading}
+        </Button>
+      </View>
     </View>
   );
 };

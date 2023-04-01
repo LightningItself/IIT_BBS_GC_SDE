@@ -35,9 +35,15 @@ const User = ({ navigation, route }) => {
 
   const [id, setId] = useState(randomUUID());
   const [Heading, setHeading] = useState("Food");
+
   const [visible, setVisible] = useState(false);
   const showModal = () => setVisible(true);
   const hideModal = () => setVisible(false);
+
+  const onRateClick = () => {
+    setVisible(false);
+    navigation.navigate("Rate Food");
+  }
 
   return (
     <>
@@ -163,6 +169,7 @@ const User = ({ navigation, route }) => {
         <ModalContent
           Heading={Heading}
           id={`${email.split("@", 1)[0]}/${id}`}
+          onRateClick={onRateClick}
         />
       </Modal>
     </>

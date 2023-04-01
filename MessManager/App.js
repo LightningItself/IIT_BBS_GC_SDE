@@ -7,6 +7,8 @@ import User from "./src/views/User";
 import theme from "./theme";
 import Admin from "./src/views/Admin";
 import MessMenu from "./src/views/MessMenu";
+import RatingPage from "./src/views/RatingPage";
+
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -56,6 +58,7 @@ export default function App() {
                 headerShadowVisible: false,
               }}
             />
+            <Stack.Screen name="Rate Food" component={RatingPage} />
           </Stack.Navigator>
         </NavigationContainer>
       </View>
