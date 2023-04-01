@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-import { StyleSheet, Text, View, Platform, ScrollView } from 'react-native';
-import Rating from './Rating';
-import { Avatar, Card, IconButton } from 'react-native-paper';
-import { useState } from 'react';
-=======
 import { StyleSheet, Text, View, Platform, ScrollView } from "react-native";
-// import Rating from '../components/Rating';
+import Rating from '../components/Rating';
 import { Avatar, Card, IconButton } from "react-native-paper";
 import { useState } from "react";
->>>>>>> cdb8eaffa943edbbc3a89f03e3eec41f69c48949
 const MealCard = (props) => {
   return (
     <Card
