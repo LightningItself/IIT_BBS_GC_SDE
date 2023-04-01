@@ -21,14 +21,14 @@ const User = () => {
 
   return (
   <>
-    <StatusBar style="dark" backgroundColor='#FF971D'/>
+    <StatusBar style="dark" backgroundColor='#FF971D' />
       <View style={styles.container}>
         <LinearGradient
           // Background Linear Gradient
           colors={['#FF971D', '#FFC375']}
           style={{borderBottomLeftRadius: 40, borderBottomRightRadius: 40, elevation: 5}}
         >
-        <View style={{padding: 10,height: 120, borderBottomRightRadius: 40, borderBottomLeftRadius: 40, paddingTop: 0,flexDirection: 'row', justifyContent: 'space-between'}}>
+        <View style={{padding: 10,height: 100, borderBottomRightRadius: 40, borderBottomLeftRadius: 40, paddingTop: 0,flexDirection: 'row', justifyContent: 'space-between'}}>
           <View>
             <Text style={{color: 'white', fontWeight: '800', fontSize: 35, paddingLeft: 20,}}>Welcome,</Text>
             <Text style={{color: '#FCF296', fontWeight: '800', fontSize: 35, paddingLeft: 20,}}>Student</Text>
@@ -73,6 +73,7 @@ const User = () => {
                 onTouchStart={() => CardHandler('Dinner')} 
                 imgAddress={require("../../assets/food4.jpg")}
               />
+             
               {/* <Card style={{marginHorizontal: 10, marginVertical: 5}} onTouchStart={() => CardHandler('Breakfast')}>
                 <Card.Title
                   title="Breakfast"

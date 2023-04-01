@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import { Button } from "@rneui/themed";
 import { ThemeProvider } from "react-native-paper";
-import MatwerialICon from "react-native-vector-icons/MaterialIcons";
+import MaterialIcon from "react-native-vector-icons/MaterialIcons";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { cloneElement, useEffect, useState } from "react";
 import * as WebBrowser from "expo-web-browser";
@@ -77,12 +77,12 @@ const Login = ({ navigation }) => {
             marginBottom: 25,
           }}
         >
-          <MatwerialICon
+          <MaterialIcon
             name="alternate-email"
             size={20}
             color="#666"
             style={{ marginRight: 5 }}
-          ></MatwerialICon>
+          ></MaterialIcon>
           <TextInput
             placeholder="Email-ID"
             style={{ flex: 1, paddingVertical: 0 }}
@@ -117,7 +117,7 @@ const Login = ({ navigation }) => {
         </View>
         <View>
           <TouchableOpacity
-            onPress={() => navigation.navigate("User")}
+            onPress={() => navigation.navigate("Admin")}
             style={{
               backgroundColor: "#AD40AF",
               padding: 20,
@@ -154,9 +154,7 @@ const Login = ({ navigation }) => {
               }}
             >
               <Image
-                source={{
-                  url: "https://static.vecteezy.com/system/resources/previews/009/469/630/original/google-logo-isolated-editorial-icon-free-vector.jpg",
-                }}
+                source={require("../../assets/google.png")}
                 style={{ height: 24, width: 24 }}
               ></Image>
             </TouchableOpacity>
@@ -167,8 +165,8 @@ const Login = ({ navigation }) => {
             flexDirection: "row",
             justifyContent: "center",
             alignContent: "flex-end",
-            marginBottom: 30,
-            marginTop: 30,
+            marginBottom: 0,
+            marginTop: 60,
           }}
         >
           <Text>Admin </Text>
