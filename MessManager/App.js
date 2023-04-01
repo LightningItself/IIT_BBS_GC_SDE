@@ -6,7 +6,7 @@ import Login from "./src/views/Login";
 import User from "./src/views/User";
 import theme from "./theme";
 import Admin from "./src/views/Admin";
-
+import MessMenu from "./src/views/MessMenu";
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -43,6 +43,19 @@ export default function App() {
 
             />
             <Stack.Screen name="Admin" component={Admin} />
+            <Stack.Screen
+              name="MessMenu" 
+              component={MessMenu} 
+              options={{ 
+                title: "", 
+                headerTitleAlign: 'center',
+                headerStyle: {
+                  backgroundColor: '#FF971D',
+                }, 
+                headerTintColor: 'white',
+                headerShadowVisible: false,
+              }}
+            />
           </Stack.Navigator>
         </NavigationContainer>
       </View>

@@ -95,7 +95,7 @@ const User = ({ navigation, route }) => {
               <Button
                 icon="timetable"
                 mode="contained-tonal"
-                onPress={() => console.log("Pressed")}
+                onPress={() => navigation.navigate("MessMenu")}
                 style={{
                   margin: 20,
                   backgroundColor: "#FFF7C7",
