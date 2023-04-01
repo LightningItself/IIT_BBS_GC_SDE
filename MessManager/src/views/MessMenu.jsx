@@ -98,7 +98,7 @@ const MessMenu = () => {
             borderBottomLeftRadius: 40,
             borderBottomRightRadius: 40,
             elevation: 5,
-            marginBottom: 30,
+            marginBottom: 50,
           }}
         >
           <View
@@ -142,6 +142,11 @@ const MessMenu = () => {
               itemWidth={windowWidth-75}
               renderItem={CarouselItem}
               onSnapToItem = { handleSnapToItem } 
+              enableSnap={true}
+              swipeThreshold={10}
+              autoplay={true}
+              autoplayDelay={200}
+              autoplayInterval={2500}
             />
       </View>
     </View>
