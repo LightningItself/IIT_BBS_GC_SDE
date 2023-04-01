@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View, Platform, ScrollView, Image } from 'react-native';
-import Rating from '../components/rating';
+import Rating from './Rating';
 import { StatusBar } from 'expo-status-bar';
 import { Button } from 'react-native-paper';
 import { useState } from 'react';

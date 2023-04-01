@@ -32,12 +32,15 @@ export default function App() {
               name="User" 
               component={User} 
               options={{ 
-                title: "Student", 
+                title: "", 
                 headerTitleAlign: 'center',
                 headerStyle: {
-                  backgroundColor: 'orange',
+                  backgroundColor: '#FF971D',
                 }, 
-                headerTintColor: 'white',}}
+                headerTintColor: 'white',
+                headerShadowVisible: false,
+              }}
+
             />
             <Stack.Screen name="Admin" component={Admin} />
           </Stack.Navigator>
