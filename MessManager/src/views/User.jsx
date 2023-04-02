@@ -10,7 +10,7 @@ import MealCard from "../components/MealCard";
 import { ref, set } from "firebase/database";
 import { db } from "../../firebaseConfig";
 import { randomUUID } from "expo-crypto";
-
+import colors from "../constants/colors";
 const User = ({ navigation, route }) => {
   const CardHandler = (text) => {
     console.log(text);
@@ -47,11 +47,11 @@ const User = ({ navigation, route }) => {
 
   return (
     <>
-      <StatusBar style="dark" backgroundColor="#FF971D" />
+      <StatusBar style="dark" backgroundColor={colors.primary} />
       <View style={styles.container}>
         <LinearGradient
           // Background Linear Gradient
-          colors={["#FF971D", "#FFC375"]}
+          colors={[colors.primary, colors.secondary]}
           style={{
             borderBottomLeftRadius: 40,
             borderBottomRightRadius: 40,
@@ -82,7 +82,7 @@ const User = ({ navigation, route }) => {
               </Text>
               <Text
                 style={{
-                  color: "#FCF296",
+                  color: colors.tertiary,
                   fontWeight: "800",
                   fontSize: 35,
                   paddingLeft: 20,
@@ -104,10 +104,10 @@ const User = ({ navigation, route }) => {
                 onPress={() => navigation.navigate("MessMenu")}
                 style={{
                   margin: 20,
-                  backgroundColor: "#FFF7C7",
+                  backgroundColor: colors.tertiary,
                   marginRight: 10,
                 }}
-                textColor="#EF7F00"
+                textColor={colors.primary}
               >
                 Menu
               </Button>
@@ -182,6 +182,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
+    backgroundColor: colors.backdrop,
   },
   viewContainer: {
     flex: 1,

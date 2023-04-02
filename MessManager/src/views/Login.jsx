@@ -13,7 +13,7 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 import { cloneElement, useEffect, useState } from "react";
 import * as WebBrowser from "expo-web-browser";
 import * as Google from "expo-auth-session/providers/google";
-
+import colors from "../constants/colors";
 WebBrowser.maybeCompleteAuthSession();
 
 const Login = ({ navigation }) => {
@@ -70,8 +70,8 @@ const Login = ({ navigation }) => {
     //     title="Server Login"
     //   />
     // </View>
-    <SafeAreaView style={{ flex: 1, justifyContent: "center" }}>
-      <View style={{ paddingHorizontal: 20 }}>
+    <SafeAreaView style={{ flex: 1, justifyContent: "center", backgroundColor: colors.backdrop }}>
+      <View style={{ paddingHorizontal: 20, }}>
         <View style={{ alignItems: "center" }}>
           <Image
             source={require("../../assets/lunch.png")}
@@ -121,7 +121,7 @@ const Login = ({ navigation }) => {
             secureTextEntry={true}
           ></TextInput>
           <TouchableOpacity onPress={() => {}}>
-            <Text style={{ color: "#06C167", fontWeight: 700 }}>
+            <Text style={{ color: colors.primary, fontWeight: 700 }}>
               Forgot password
             </Text>
           </TouchableOpacity>
@@ -130,7 +130,7 @@ const Login = ({ navigation }) => {
           <TouchableOpacity
             onPress={() => navigation.navigate("User")}
             style={{
-              backgroundColor: "#06C167",
+              backgroundColor: colors.primary,
               padding: 20,
               borderRadius: 10,
               marginBottom: 25,
@@ -182,7 +182,7 @@ const Login = ({ navigation }) => {
         >
           <Text>Admin </Text>
           <TouchableOpacity onPress={googleLoginHandler.bind(this, true)}>
-            <Text style={{ color: "#06C167", fontWeight: 700 }}>
+            <Text style={{ color: colors.primary, fontWeight: 700 }}>
               Click Here
             </Text>
           </TouchableOpacity>

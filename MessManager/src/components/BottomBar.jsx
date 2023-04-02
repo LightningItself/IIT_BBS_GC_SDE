@@ -5,6 +5,7 @@ import MenuUpdate from '../views/MenuUpdate';
 import { NavigationContainer } from '@react-navigation/native';
 import Ionicons from "react-native-vector-icons/Ionicons";
 import CodeScanner from './CodeScanner';
+import colors from '../constants/colors';
 const Tab = createBottomTabNavigator();
 
 const codename="CodeScanner";
@@ -14,7 +15,7 @@ function BottomBar() {
     <Tab.Navigator
       initialRouteName="codename"
       screenOptions={({route})=>({
-        tabBarActiveTintColor:'#06C167',
+        tabBarActiveTintColor:colors.primary,
         tabBarIcon:({focused,color,size})=>{
             let iconName;
             let rn=route.name;

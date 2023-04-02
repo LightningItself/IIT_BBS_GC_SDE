@@ -4,7 +4,7 @@ import { View, Text, StyleSheet } from "react-native";
 import { TextInput, Button } from "react-native-paper";
 import Icon from "@mdi/react";
 import { mdiMenuDown } from "@mdi/js";
-
+import colors from "../constants/colors";
 const Days = [
   {
     value: "Monday",
@@ -106,7 +106,7 @@ const MenuUpdateForm = () => {
           value={menu}
           mode="outlined"
           onChangeText={(text) => setMenu(text)}
-          activeUnderlineColor="orange"
+          activeUnderlineColor= {colors.primary}
         />
       </View>
       <Button mode="contained" onPress={handleSubmit} style={styles.button}>
@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#FFF5EC",
+    backgroundColor: colors.backdrop,
   },
   title: {
     fontSize: 30,
@@ -133,7 +133,7 @@ const styles = StyleSheet.create({
     width: "90%",
     marginVertical: 30,
     marginHorizontal: 20,
-    backgroundColor: "#FFEDCA",
+    backgroundColor: colors.tertiary,
     height: 10,
   },
   button: {
@@ -141,6 +141,7 @@ const styles = StyleSheet.create({
     height: 40,
     marginTop: 60,
     textAlign: "center",
+    backgroundColor: colors.primary,
   },
 });
 

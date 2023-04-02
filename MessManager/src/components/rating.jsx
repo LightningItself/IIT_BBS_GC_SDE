@@ -3,6 +3,7 @@ import { AirbnbRating } from '@rneui/themed';
 import {Button, TextInput} from 'react-native-paper';
 import { useState } from 'react';
 import { LinearGradient } from "expo-linear-gradient";
+import colors from '../constants/colors';
 const Rating = () => {
   const ratingCompleted = (rating) => {
     console.log('Rating is: ' + rating);
@@ -24,7 +25,7 @@ const Rating = () => {
     <View style={styles.container}>
       <LinearGradient
           // Background Linear Gradient
-          colors={["#FF971D", "#FFC375"]}
+          colors={[colors.primary, colors.secondary]}
           style={{
             borderBottomLeftRadius: 40,
             borderBottomRightRadius: 40,
@@ -52,7 +53,7 @@ const Rating = () => {
               </Text>
               <Text
                 style={{
-                  color: "#FCF296",
+                  color: colors.tertiary,
                   fontWeight: "800",
                   fontSize: 35,
                   paddingLeft: 20,
@@ -69,8 +70,8 @@ const Rating = () => {
         defaultRating={0}
         size={40}
         onFinishRating={(value) => setRating(value)}
-        reviewColor="#FF971D"
-        selectedColor='#FF971D'
+        reviewColor={colors.primary}
+        selectedColor={colors.primary}
       />
     </View>
     <View style={styles.inputContainer}>
@@ -79,21 +80,21 @@ const Rating = () => {
         value={tasteReview}
         onChangeText={(value) => setTasteReview(value)}
         style={styles.input}
-        activeUnderlineColor="orange"
+        activeUnderlineColor={colors.primary}
       />
       <TextInput
         label="How was the quality?"
         value={foodReview}
         onChangeText={(value) => setFoodReview(value)}
         style={styles.input}
-        activeUnderlineColor="orange"
+        activeUnderlineColor={colors.primary}
       />
       <TextInput
         label="What can we improve?"
         value={suggestions}
         onChangeText={(value) => setSuggestions(value)}
         style={styles.input}
-        activeUnderlineColor="orange"
+        activeUnderlineColor={colors.primary}
       />
     </View>
     <View style={styles.buttonContainer}>
@@ -110,7 +111,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    backgroundColor: '#FFF5EC',
+    backgroundColor: colors.backdrop,
   },
   headingContainer: {
     flex: 1,
@@ -133,13 +134,13 @@ const styles = StyleSheet.create({
   input: {
     width: '100%',
     marginVertical: 15,
-    backgroundColor: '#FFEDCA',
+    backgroundColor: colors.tertiary,
   },
   button: {
     width: '90%',
     marginTop: 20,
     borderRadius: 10,
     elevation: 5,
-    backgroundColor: 'orange',
+    backgroundColor: colors.primary,
   },
 });

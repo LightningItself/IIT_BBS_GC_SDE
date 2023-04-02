@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, Platform, ScrollView } from "react-native";
 import Rating from './Rating';
 import { Avatar, Card, IconButton } from "react-native-paper";
 import { useState } from "react";
+import colors from "../constants/colors";
 const MealCard = (props) => {
   return (
     <Card
@@ -9,7 +10,7 @@ const MealCard = (props) => {
         marginHorizontal: 10,
         marginVertical: 5,
         padding: 0,
-        backgroundColor: "#FFF5EC",
+        backgroundColor: colors.tertiary,
       }}
       onTouchEndCapture={props.onTouchStart}
     >
@@ -20,7 +21,7 @@ const MealCard = (props) => {
           <Avatar.Icon
             {...Iconprops}
             icon={props.icon}
-            style={{ backgroundColor: "orange" }}
+            style={{ backgroundColor: colors.primary }}
             color="white"
           />
         )}

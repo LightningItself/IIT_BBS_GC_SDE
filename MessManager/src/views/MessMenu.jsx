@@ -4,13 +4,13 @@ import Carousel from 'react-native-snap-carousel';
 import {Dimensions} from 'react-native';
 import { Card, Title, Paragraph } from 'react-native-paper';
 import { LinearGradient } from "expo-linear-gradient";
-
+import colors from "../constants/colors";
 const CarouselItem = ({ item, index }) => {
     return (
         <View style={styles.container}>
             <Card style={styles.card}>
                 <Title style={{fontWeight: '900', fontSize: 30, padding: 10, textAlign: 'center', paddingBottom: 0, color: 'white'}}>{item.dayName}</Title>
-                <Card.Content style={{ margin: 8, borderRadius: 10, backgroundColor: '#FDEEC9'}}>
+                <Card.Content style={{ margin: 8, borderRadius: 10, backgroundColor: colors.backdrop}}>
                     <Paragraph style={styles.heading}>Breakfast:</Paragraph>
                     <Paragraph style={styles.para}>{item.food1}</Paragraph>
                     <Paragraph style={styles.heading}>Lunch:</Paragraph>
@@ -90,10 +90,10 @@ const MessMenu = () => {
       };
 
   return (
-    <View style={{ flex: 1 , backgroundColor: '#FFEED8'}}>
+    <View style={{ flex: 1 , backgroundColor: colors.backdrop}}>
       <LinearGradient
           // Background Linear Gradient
-          colors={["#FF971D", "#FFC375"]}
+          colors={[colors.primary, colors.secondary]}
           style={{
             borderBottomLeftRadius: 40,
             borderBottomRightRadius: 40,
@@ -123,7 +123,7 @@ const MessMenu = () => {
               </Text>
               <Text
                 style={{
-                  color: "#FCF296",
+                  color: colors.tertiary,
                   fontWeight: "800",
                   fontSize: 35,
                   paddingLeft: 20,
@@ -163,7 +163,7 @@ const styles = StyleSheet.create({
     card: {
       borderRadius: 15,
       elevation: 5,
-      backgroundColor: 'orange',
+      backgroundColor: colors.primary,
       paddingTop: 5
     },
     heading: {

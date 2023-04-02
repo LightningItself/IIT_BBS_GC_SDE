@@ -9,7 +9,7 @@ import Admin from "./src/views/Admin";
 import MessMenu from "./src/views/MessMenu";
 import RatingPage from "./src/views/RatingPage";
 import { Provider } from "react-native-paper";
-
+import colors from "./src/constants/colors";
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -39,13 +39,24 @@ export default function App() {
                   title: "",
                   headerTitleAlign: "center",
                   headerStyle: {
-                    backgroundColor: "#FF971D",
+                    backgroundColor: colors.primary,
                   },
                   headerTintColor: "white",
                   headerShadowVisible: false,
                 }}
               />
-              <Stack.Screen name="Admin" component={Admin} />
+              <Stack.Screen 
+                name="Admin" 
+                component={Admin}
+                options={{
+                  title: "Admin",
+                  headerTitleAlign: "center",
+                  headerStyle: {
+                    backgroundColor: colors.primary,
+                  },
+                  headerTintColor: "white",
+                }} 
+              />
               <Stack.Screen
                 name="MessMenu"
                 component={MessMenu}
@@ -53,7 +64,7 @@ export default function App() {
                   title: "",
                   headerTitleAlign: "center",
                   headerStyle: {
-                    backgroundColor: "#FF971D",
+                    backgroundColor: colors.primary,
                   },
                   headerTintColor: "white",
                   headerShadowVisible: false,
@@ -66,7 +77,7 @@ export default function App() {
                   title: "",
                   headerTitleAlign: "center",
                   headerStyle: {
-                    backgroundColor: "#FF971D",
+                    backgroundColor: colors.primary,
                   },
                   headerTintColor: "white",
                   headerShadowVisible: false,

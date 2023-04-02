@@ -11,7 +11,7 @@ import { StatusBar } from "expo-status-bar";
 import { Button } from "react-native-paper";
 import { useState } from "react";
 import QRCode from "react-native-qrcode-svg";
-
+import colors from "../constants/colors";
 const ModalContent = (props) => {
   const imgAddress =
     props.Heading === "Breakfast"
@@ -38,7 +38,7 @@ const ModalContent = (props) => {
   return (
     <View
       style={{
-        backgroundColor: "white",
+        backgroundColor: colors.backdrop,
         height: 600,
         borderTopLeftRadius: 20,
         borderTopRightRadius: 20,
@@ -69,7 +69,7 @@ const ModalContent = (props) => {
           style={{
             fontWeight: "bold",
             fontSize: 32,
-            borderBottomColor: "orange",
+            borderBottomColor: 'black',
             borderBottomWidth: 1,
             textAlign: "center",
           }}
@@ -92,7 +92,7 @@ const ModalContent = (props) => {
           borderRadius: 20,
           justifyContent: "center",
           alignItems: "center",
-          borderColor: "orange",
+          borderColor: colors.primary,
           backgroundColor: "#F4F0EB",
         }}
       >
@@ -101,7 +101,7 @@ const ModalContent = (props) => {
             icon="qrcode"
             mode="contained"
             onPress={QRCodeHandler}
-            buttonColor="orange"
+            buttonColor={colors.primary}
           >
             Generate QR
           </Button>
@@ -132,7 +132,7 @@ const ModalContent = (props) => {
             icon="close-circle"
             mode="contained"
             onPress={QRClose}
-            buttonColor="orange"
+            buttonColor={colors.primary}
           >
             Close
           </Button>
@@ -142,7 +142,7 @@ const ModalContent = (props) => {
           icon="star-circle"
           mode="contained"
           onPress={props.onRateClick}
-          buttonColor="orange"
+          buttonColor={colors.primary}
           style={{alignSelf:"center",}}
         >
           Rate {props.Heading}
