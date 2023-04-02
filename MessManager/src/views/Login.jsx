@@ -121,16 +121,16 @@ const Login = ({ navigation }) => {
             secureTextEntry={true}
           ></TextInput>
           <TouchableOpacity onPress={() => {}}>
-            <Text style={{ color: "#AD40AF", fontWeight: 700 }}>
+            <Text style={{ color: "#06C167", fontWeight: 700 }}>
               Forgot password
             </Text>
           </TouchableOpacity>
         </View>
         <View>
           <TouchableOpacity
-            onPress={() => navigation.navigate("Admin")}
+            onPress={() => navigation.navigate("User")}
             style={{
-              backgroundColor: "#AD40AF",
+              backgroundColor: "#06C167",
               padding: 20,
               borderRadius: 10,
               marginBottom: 25,
@@ -182,7 +182,7 @@ const Login = ({ navigation }) => {
         >
           <Text>Admin </Text>
           <TouchableOpacity onPress={googleLoginHandler.bind(this, true)}>
-            <Text style={{ color: "#AD40AF", fontWeight: 700 }}>
+            <Text style={{ color: "#06C167", fontWeight: 700 }}>
               Click Here
             </Text>
           </TouchableOpacity>

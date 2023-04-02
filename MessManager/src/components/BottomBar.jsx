@@ -14,7 +14,7 @@ function BottomBar() {
     <Tab.Navigator
       initialRouteName="codename"
       screenOptions={({route})=>({
-        tabBarActiveTintColor:'#e91e63',
+        tabBarActiveTintColor:'#06C167',
         tabBarIcon:({focused,color,size})=>{
             let iconName;
             let rn=route.name;
