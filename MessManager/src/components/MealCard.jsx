@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View, Platform, ScrollView } from "react-native";
-import Rating from './Rating';
+//import Rating from './Rating';
 import { Avatar, Card, IconButton } from "react-native-paper";
 import { useState } from "react";
 import colors from "../constants/colors";

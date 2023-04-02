@@ -5,6 +5,9 @@ import { TextInput, Button } from "react-native-paper";
 import Icon from "@mdi/react";
 import { mdiMenuDown } from "@mdi/js";
 import colors from "../constants/colors";
+import { collection, doc, updateDoc } from "firebase/firestore";
+import { db } from "../../firebaseConfig";
+
 const Days = [
   {
     value: "Monday",
@@ -64,7 +67,9 @@ const MenuUpdateForm = () => {
   const [menu, setMenu] = useState(null);
 
   const handleSubmit = () => {
-    console.log(day, meal, menu);
+    // const docRef = doc(db, `${day}`, `${meal}`);
+    // updateDoc(docRef, {})
+    console.log("updated");
   };
 
   return (
