@@ -10,7 +10,7 @@ const MealCard = (props) => {
         marginHorizontal: 10,
         marginVertical: 5,
         padding: 0,
-        backgroundColor: colors.tertiary,
+        backgroundColor: colors.card,
       }}
       onTouchEndCapture={props.onTouchStart}
     >

@@ -4,4 +4,5 @@ export default Colors = {
     tertiary: "#D5FEEA",
     textlight: "#C6FEE3",
     backdrop: "#F1FFF8",
+    card: "#E3FEF1",
 }
