@@ -1,6 +1,11 @@
 import { StyleSheet, Text, View, Platform, ScrollView } from "react-native";
+<<<<<<< HEAD
 import Rating from '../components/Rating';
 import { Avatar, Card, IconButton } from "react-native-paper";
+=======
+// import Rating from '../components/Rating';
+import { Avatar, Card, Button } from "react-native-paper";
+>>>>>>> 43b16c391e0c2eb5b86613fa307596d1e45e89a1
 import { useState } from "react";
 const MealCard = (props) => {
   return (

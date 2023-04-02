@@ -10,7 +10,7 @@ const CarouselItem = ({ item, index }) => {
         <View style={styles.container}>
             <Card style={styles.card}>
                 <Title style={{fontWeight: '900', fontSize: 30, padding: 10, textAlign: 'center', paddingBottom: 0, color: 'white'}}>{item.dayName}</Title>
-                <Card.Content style={{ margin: 8, borderRadius: 10, backgroundColor: '#FEEAB8'}}>
+                <Card.Content style={{ margin: 8, borderRadius: 10, backgroundColor: '#FDEEC9'}}>
                     <Paragraph style={styles.heading}>Breakfast:</Paragraph>
                     <Paragraph style={styles.para}>{item.food1}</Paragraph>
                     <Paragraph style={styles.heading}>Lunch:</Paragraph>
@@ -98,7 +98,7 @@ const MessMenu = () => {
             borderBottomLeftRadius: 40,
             borderBottomRightRadius: 40,
             elevation: 5,
-            marginBottom: 30,
+            marginBottom: 50,
           }}
         >
           <View
@@ -142,6 +142,11 @@ const MessMenu = () => {
               itemWidth={windowWidth-75}
               renderItem={CarouselItem}
               onSnapToItem = { handleSnapToItem } 
+              enableSnap={true}
+              swipeThreshold={10}
+              autoplay={true}
+              autoplayDelay={200}
+              autoplayInterval={2500}
             />
       </View>
     </View>
